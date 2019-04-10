@@ -1,0 +1,138 @@
+/* First fold */
+.first-fold {
+  height: 680px;
+}
+.masthead-backdrop {
+  height: 663.73px;
+  background: radial-gradient(circle, @color_purple_2 0%, @color_purple 100%);
+  box-shadow: inset 0 0 20px 0 #4C50C5;
+}
+.container {
+  display: block;
+  background: @color_white;
+  height: 60vh;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rotated-block {
+  display: block;
+  overflow: hidden;
+  transform: skew(13deg, -32deg) rotate(40deg) !important;
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  min-height: 680px;
+  background: @background_1 repeat;
+  left: -69px;
+  top: -208px;
+  background-size: initial;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 680px;
+    background: radial-gradient(circle at bottom right, @gradient_purple 0%, @gradient_transparent 55%);
+    box-shadow: inset 0 0 20px 0 @color_purple;
+  }
+}
+.content {
+  position: relative;
+  z-index: 3;
+  top: 64px;
+  left: 10%;
+}
+
+/* Text Highlight*/
+.highlight {
+  height: 40px;
+  max-width: 228px;
+  background-color: @color_green_2;
+}
+/* Texts */
+.tor-comes-with-a-co {
+  height: 48px;
+  max-width: 472px;
+  color: @color_black;
+  font-family: @font_family_1;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+  display: inline-block;
+}
+.title-white {
+  height: 120px;
+  color: @color_white !important;
+  font-family: @font_family_1 !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  line-height: 40px !important;
+  text-shadow: 0 2px 16px 0 rgba(0,0,0,0.24) !important;
+  display: inline-block;
+}
+.ui.sizer.vertical.segment .title-white {
+    max-width: 390px;
+  }
+.description-white {
+  height: 104px;
+  width: 390px;
+  color: @color_white;
+  font-family: @font_family_1;
+  font-size: 16px;
+  line-height: 24px;
+  text-shadow: 0 2px 4px 0 rgba(0,0,0,0.24);
+}
+
+/* Images*/
+.masterhead {
+  height: 567px;
+  background: @master_head no-repeat;
+  background-position-x: 7vw;
+}
+.logo {
+  height: 83.79px;
+  width: 304.4px;
+  background-size: cover;
+  background-image:  @logo ;
+  background-position-x: -20px ;
+}
+
+/* Media Query */
+@media screen and (max-width: 875px) {
+  .content {
+    top: 11%;
+    left: 0%;
+    padding: 0px 20px;
+  }
+  .rotated-block {
+    left: -114px;
+    top: -200px;
+    transform: skew(13deg, -13deg) rotate(40deg) !important;
+    position: absolute;
+    z-index: 1;
+    width: 537px;
+    min-height: 1033px;
+    &::before {
+      width: 537px;
+      min-height: 1033px;
+    }
+  }
+  .description-white {
+    width: auto;
+    margin-top: 20px !important;
+  }
+  .masterhead {
+    height: 444px;
+    width: 120%;
+    background-position-x: center;
+    margin-left: -11%;
+    background-size: contain;
+  }
+  .first-fold {
+    height: 940px;
+  }
+}

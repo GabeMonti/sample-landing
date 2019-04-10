@@ -1,0 +1,100 @@
+/*background animation*/
+
+@-webkit-keyframes slide-left {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@-webkit-keyframes slide-right {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+/*buttons animation*/
+
+@-webkit-keyframes swoosh {
+  0% {
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  20% {
+    -webkit-transform: skewX(-20deg) scaleX(1);
+    transform: skewX(-20deg) scaleX(1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  21% {
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+  50% {
+    -webkit-transform: skewX(-20deg) scaleX(0);
+    transform: skewX(-20deg) scaleX(0);
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+}
+@keyframes swoosh {
+  0% {
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  20% {
+    -webkit-transform: skewX(-20deg) scaleX(1);
+    transform: skewX(-20deg) scaleX(1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  21% {
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+  50% {
+    -webkit-transform: skewX(-20deg) scaleX(0);
+    transform: skewX(-20deg) scaleX(0);
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+}
+@-webkit-keyframes fill {
+  0% {
+    background-color: rgba(14, 56, 118, 0);
+  }
+  20% {
+    opacity: .5;
+    border-width: 15px;
+    border-color: @color_green_1;
+  }
+  100% {
+    opacity: .5;
+    border-width: 1px;
+    background-color: @color_green_1;
+  }
+}
+@keyframes fill {
+  0% {
+    background-color: rgba(14, 56, 118, 0);
+  }
+  20% {
+    opacity: .5;
+    border-width: 15px;
+    border-color: @color_green_1;
+  }
+  50% {
+    opacity: .5;
+    border-width: 1px;
+    background-color: @color_green_1;
+  }
+  100% {
+    opacity: 1;
+    border-width: 1px;
+    background-color: @color_green_1;
+  }
+}

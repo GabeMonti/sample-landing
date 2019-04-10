@@ -1,0 +1,51 @@
+/* Steps background */
+.steps {
+  padding-bottom: 200px;
+  background: @color_grey @background_2;
+}
+
+/* Footer Backgrounds */
+.static-block {
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  margin-top: -25%;
+  min-height: 900px;
+  background-image: @background_1;
+  background-size: initial;
+  &::before {
+    content: '';
+    width: 100vw;
+    min-height: 900px;
+    display: block;
+    background: radial-gradient(circle at top left,rgba(131, 136, 228, .8) 0%, RGBA(0,0,0,0) 55%);
+    box-shadow: inset 0 0 20px 0 #4C50C5;
+  }
+}
+.second-container {
+  position: relative;
+  width: 100vw;
+  overflow: hidden !important;
+  height: 686px;
+}
+.static-block2 {
+  overflow: hidden;
+  transform: skew(0deg, -4deg) !important;
+  z-index: 5;
+  position: absolute;
+  width: 100vw;
+  margin-top: 305px;
+  min-height: 450px;
+  background-image: @background_1;
+  background-size: initial;
+  box-shadow: 20px 20px 20px 20px #4C50C5;
+  &::before {
+    content: '';
+    width: 100vw;
+    min-height: 750px;
+    display: block;
+    background: radial-gradient(circle at top right,rgba(131, 136, 228, .8) 0%, RGBA(0,0,0,0) 55%);
+    box-shadow: inset 0 0 20px 0 #4C50C5;
+  }
+}

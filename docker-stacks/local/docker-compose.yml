@@ -1,0 +1,27 @@
+version: "1.0"
+services:
+  frontend:
+    image: local
+    ports:
+    - 80:80
+    volumes:
+    - ../../:/var/www/
+    restart: always
+    build:
+      context: ./
+    links:
+    - node-build
+
+  node-build:
+    image: local
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+    - NODE_ENV=develop
+    volumes:
+    - "../../:/home/node/app"
+    command: "tail -f /dev/null"
+    restart: always
+    build:
+      context: .
+      dockerfile: node-build/Dockerfile
